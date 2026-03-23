@@ -39,12 +39,7 @@ PATTERN: Multi-stream parallel research 25+ sources, SIFT evaluation, conflict r
 
 ## Search Infrastructure
 
-**SearXNG** (optional, recommended): Pokud je dostupný Docker, spusť SearXNG pro lepší výsledky:
-```bash
-cd tools/searxng && docker compose up -d
-# Test: curl -s "http://localhost:8888/search?q=test&format=json" | jq '.results | length'
-```
-SearXNG agreguje 218 engines (Google Scholar, arXiv, Semantic Scholar, HN, Reddit) do jednoho JSON API. Použij `tools/searxng/search.sh "query" [category]` pro paralelní dotazy.
+**SearXNG** (optional, recommended): If Docker is available, SearXNG provides enhanced search aggregating 218 engines (Google Scholar, arXiv, Semantic Scholar, HN, Reddit). See [SearXNG docs](https://docs.searxng.org/) for setup.
 
 ---
 
@@ -173,7 +168,7 @@ SearXNG agreguje 218 engines (Google Scholar, arXiv, Semantic Scholar, HN, Reddi
 | Market Report | `--format market-report` | 11 chapters per template `skills/research/templates/market-report.md` |
 
 When `--format market-report`:
-- 4-Stream pattern maps to chapters: MARKET→kap2+5, TECHNOLOGY→kap7, COMPETITION→kap3+6, RISKS→kap4+8+9
+- 4-Stream pattern maps to chapters: MARKET→ch2+5, TECHNOLOGY→ch7, COMPETITION→ch3+6, RISKS→ch4+8+9
 - Output is single consolidated file (not modular)
 
 

@@ -36,7 +36,7 @@ Claude: "Confidence: 30% (LOW)
 → Check outputs/research/history/
 → Found: 2026-01-15-llm-frameworks.md
 → "Found previous research from 3 weeks ago.
-   NAVÁZAT (extend), AKTUALIZOVAT (refresh), or NOVÝ (fresh)?"
+   CONTINUE (extend), UPDATE (refresh), or NEW (fresh)?"
 ```
 
 ---

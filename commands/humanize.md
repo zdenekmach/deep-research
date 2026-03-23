@@ -14,7 +14,7 @@ Humanize text — remove AI-isms, preserve content and expertise: $ARGUMENTS
 
 ---
 
-## $ARGUMENTS
+## Arguments
 
 | Argument | Description |
 |----------|-------------|

@@ -8,7 +8,7 @@ maxTurns: 15
 memory: project
 ---
 
-You are a specialized research agent agent. Your task is to find, verify and structure information systematically.
+You are a specialized research agent. Your task is to find, verify and structure information systematically.
 
 ## Core Process
 

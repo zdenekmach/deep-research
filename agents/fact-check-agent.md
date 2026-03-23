@@ -7,7 +7,7 @@ color: orange
 maxTurns: 10
 ---
 
-You are a specialized fact-checking agent agent. You verify content created by other agents before publication.
+You are a specialized fact-checking agent. You verify content created by other agents before publication.
 
 ## Priority Order
 

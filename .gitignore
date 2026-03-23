@@ -2,3 +2,5 @@
 *.swp
 *~
 outputs/
+settings.local.json
+.claude/agent-memory/

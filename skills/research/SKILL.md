@@ -50,15 +50,15 @@ Assess request (100-200 tokens max):
 ### 2. Load Context
 
 ```
-mcp__memory__open_nodes ["Zdenek", "CommandHistory"]
+# Load any available project context
 ```
 
 Check previous research:
 ```bash
-grep -l "$TOPIC" outputs/research/history/*.md
+grep -l "$TOPIC" outputs/research/*.md
 ```
 
-If found, offer: NAVÁZAT / AKTUALIZOVAT / NOVÝ
+If found, offer: CONTINUE (extend existing) / UPDATE (refresh) / NEW (start fresh)
 
 ### 3. Subagent Decision
 
@@ -86,10 +86,10 @@ If found, offer: NAVÁZAT / AKTUALIZOVAT / NOVÝ
 #### Freshness Score
 | Timeframe | Score | Rationale |
 |-----------|-------|-----------|
-| Dnes/včera | HIGH (3) | Most current, relevant for fast-moving topics |
-| Tento týden | GOOD (2) | Recent, likely still accurate |
-| Tento měsíc | MODERATE (1) | Acceptable for stable domains |
-| Starší | LOWER (0) | Use only if no recent alternatives |
+| Today/yesterday | HIGH (3) | Most current, relevant for fast-moving topics |
+| This week | GOOD (2) | Recent, likely still accurate |
+| This month | MODERATE (1) | Acceptable for stable domains |
+| Older | LOWER (0) | Use only if no recent alternatives |
 
 #### Authority Score
 | Source Type | Score | Examples |
@@ -180,7 +180,6 @@ No hallucinated URLs - all sources must be real
 | Read | Load context files |
 | Glob | Find existing research |
 | Bash (knowledge/utils.py) | Query domain model, KG |
-| mcp__memory__* | Check related knowledge |
 | AskUserQuestion | Clarify requirements |
 | Task | Delegate to subagent |
 | Write | Save output (final only) |
@@ -238,24 +237,25 @@ When `--format market-report` is specified, use template: `templates/market-repo
 | File | Content |
 |------|---------|
 | `templates/research-output.md` | Full output template |
-| `references/workflow.md` | Detailed step-by-step |
+| `templates/market-report.md` | Market report template (11 chapters) |
 | `references/anti-patterns.md` | Common mistakes |
+| `domains/*.md` | Domain-specific decomposition templates |
 
 ---
 
-## Viz také
+## See Also
 
 - `/deep-research` — 25+ sources, multi-pass
 
 
-- `/knowledge save` — Save discovered entities
+
 
 ## Definition of Done
 
-> Typ: `research` | Ref: `skills/research/references/definition-of-done.md`
-
-Před finalizací ověř checklist pro typ `research`:
-```
-# Run Definition of Done checklist for research
-```
+Before finalizing, verify:
+- [ ] All claims have citations with URLs
+- [ ] Confidence scoring applied to all findings
+- [ ] Contradictions explicitly resolved
+- [ ] Output saved to `outputs/research/`
+- [ ] Frontmatter complete (type, date, confidence, sources_count)
 
