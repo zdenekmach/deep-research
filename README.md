@@ -113,6 +113,26 @@ deep-research/
         └── critic-agent.md
 ```
 
+## Domain Templates
+
+The plugin includes domain-specific research templates that guide topic decomposition for common scenarios:
+
+| Template | Use Case | Key Output |
+|----------|----------|------------|
+| `market-entry` | New market evaluation | GO/NO-GO with attractiveness score |
+| `technology-evaluation` | Technology adoption decisions | Weighted decision matrix |
+| `regulatory-landscape` | Compliance & regulation mapping | Gap analysis + remediation roadmap |
+| `wildlife-photography` | Example non-business template | Species guide + photography settings |
+
+Create your own templates in `skills/research/domains/` — the research agent automatically checks for matching domain templates during topic decomposition.
+
+## Output Templates
+
+| Template | Flag | Structure |
+|----------|------|-----------|
+| `research-output.md` | *(default)* | Executive Summary → Findings → Contradictions → Sources |
+| `market-report.md` | `--format market-report` | 11-chapter market report (TAM/SAM/SOM, Porter's, PESTLE, SWOT...) |
+
 ## Output
 
 Research outputs are saved to `outputs/research/` by default. Each output includes:

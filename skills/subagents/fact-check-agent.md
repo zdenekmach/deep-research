@@ -156,8 +156,8 @@ Vrať strukturovaný report:
 
 ## Recommendations
 
-1. [Konkrétní doporučení 1]
-2. [Konkrétní doporučení 2]
+1. [Specific recommendation 1]
+2. [Specific recommendation 2]
 ```
 
 ## Token Budget
@@ -175,7 +175,7 @@ Před odevzdáním zkontroluj:
 
 - [ ] Všechny odkazy ověřeny
 - [ ] Všechny statistiky s čísly zkontrolovány
-- [ ] Žádné CRITICAL issues bez doporučení
+- [ ] No CRITICAL issues without recommendations
 - [ ] Report obsahuje actionable recommendations
 
 ## Příklad

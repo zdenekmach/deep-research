@@ -88,7 +88,7 @@ Kontroluj:
 
 Kontroluj:
 - Přechody mezi sekcemi (existují?)
-- Délka odstavců (max 3-4 věty)
+- Paragraph length (max 3-4 sentences)
 - Variace délky vět
 - Hierarchie nadpisů (H2/H3 logická?)
 - Konzistence tónu
@@ -98,14 +98,14 @@ Kontroluj:
 | Score | Kritéria |
 |-------|----------|
 | 9-10 | Čtenář přesně ví co dělat dál, konkrétní kroky, metriky úspěchu |
-| 7-8 | Jasné takeaways, většina doporučení konkrétní |
-| 5-6 | Některé takeaways vágní, chybí "jak" u doporučení |
+| 7-8 | Clear takeaways, most recommendations specific |
+| 5-6 | Some takeaways vague, missing "how" in recommendations |
 | 3-4 | Převážně deskriptivní, málo actionable insights |
-| 1-2 | Žádná doporučení nebo next steps |
+| 1-2 | No recommendations or next steps |
 
 Kontroluj:
 - Má každá sekce takeaway?
-- Jsou doporučení konkrétní (kdo, co, kdy)?
+- Are recommendations specific (who, what, when)?
 - Existuje CTA nebo next steps?
 - Může čtenář jednat BEZ dalšího researche?
 
@@ -174,7 +174,7 @@ Pro REVISE verdikt: jasné instrukce CO přepsat a JAK.
 
 ## Rewrite Instructions (if REVISE)
 
-[Konkrétní kroky pro přepis, seřazené podle priority]
+[Specific rewrite steps, ordered by priority]
 ```
 
 ## Token Budget
@@ -243,8 +243,8 @@ Je zřejmé, že organizace, které nepřijmou AI, zůstanou pozadu.
 
 | Dimension | Score | Key Evidence |
 |-----------|-------|-------------|
-| Accuracy | 3/10 | Žádná konkrétní data, "mnoho firem" bez zdroje, "významné výsledky" nekvantifikované |
-| Conciseness | 2/10 | 3 věty říkají totéž — "AI je důležité". "V dnešní rychle se měnící době" je archetypální filler |
+| Accuracy | 3/10 | No specific data, "many companies" without source, "significant results" unquantified |
+| Conciseness | 2/10 | 3 sentences say the same — "AI matters". "In today's rapidly changing world" is archetypal filler |
 | Readability | 5/10 | Gramaticky správné, ale generické a nudné — nic čtenáře nezaujme |
 | Actionability | 1/10 | Žádný konkrétní takeaway, žádné "co dělat", žádné příklady |
 | **Overall** | **2.8/10** | |

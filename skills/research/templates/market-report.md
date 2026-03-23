@@ -1,6 +1,6 @@
 # Market Research Report Template
 
-Template pro `--format market-report` výstup z `/research` a `/deep-research`.
+Template for `--format market-report` output from `/research` and `/deep-research`.
 
 ---
 
@@ -21,24 +21,24 @@ created_by: /research --format market-report
 ---
 ```
 
-## Report Structure (11 kapitol)
+## Report Structure (11 Chapters)
 
-### 1. Executive Summary (2-3 strany)
+### 1. Executive Summary (2-3 pages)
 
-- **Market Snapshot Box:** Klíčové metriky na první pohled (velikost trhu, CAGR, klíčoví hráči)
-- **Investment Thesis:** 3-5 bodů shrnutí
-- **Key Findings:** Hlavní zjištění
-- **Strategic Recommendations:** Top 3-5 doporučení
+- **Market Snapshot Box:** Key metrics at a glance (market size, CAGR, key players)
+- **Investment Thesis:** 3-5 point summary
+- **Key Findings:** Main discoveries
+- **Strategic Recommendations:** Top 3-5 recommendations
 
 ### 2. Market Overview & Size
 
-- Definice a ohraničení trhu
-- **TAM** (Total Addressable Market) — celková velikost
-- **SAM** (Serviceable Addressable Market) — dosažitelný segment
-- **SOM** (Serviceable Obtainable Market) — realistický cíl
-- Historický růst (3-5 let zpět)
-- Projekce (3-5 let dopředu)
-- CAGR historický a projektovaný
+- Market definition and boundaries
+- **TAM** (Total Addressable Market) — total size
+- **SAM** (Serviceable Addressable Market) — reachable segment
+- **SOM** (Serviceable Obtainable Market) — realistic target
+- Historical growth (3-5 years back)
+- Projections (3-5 years forward)
+- CAGR historical and projected
 
 ### 3. Industry Analysis (Porter's Five Forces)
 
@@ -63,28 +63,28 @@ created_by: /research --format market-report
 
 ### 5. Customer Analysis
 
-- Segmenty zákazníků (velikost, růst, chování)
+- Customer segments (size, growth, behavior)
 - Needs & pain points per segment
 - Decision-making process
 - Value drivers
 
 ### 6. Competitive Landscape
 
-- **Market share** top hráčů (tabulka)
-- **Competitive positioning matrix** (2x2: cena × kvalita nebo jiné osy)
-- **Feature comparison** klíčových řešení (tabulka: Strong/Adequate/Weak/Absent)
+- **Market share** of top players (table)
+- **Competitive positioning matrix** (2×2: price × quality or other axes)
+- **Feature comparison** of key solutions (table: Strong/Adequate/Weak/Absent)
 - Barriers to entry
 
 ### 7. Technology Trends
 
-- Současný technology stack
+- Current technology stack
 - Emerging technologies
 - Adoption timeline
 - Innovation hotspots
 
 ### 8. Regulatory Environment
 
-- Klíčové regulace (stávající a připravované)
+- Key regulations (current and upcoming)
 - Compliance requirements
 - Regulatory risk assessment
 
@@ -97,40 +97,38 @@ created_by: /research --format market-report
 
 ### 10. Strategic Recommendations
 
-- Top 3-5 doporučení s prioritizací (HIGH/MEDIUM/LOW)
-- Pro každé: co, proč, jak, timeline, effort
+- Top 3-5 recommendations prioritized (HIGH/MEDIUM/LOW)
+- For each: what, why, how, timeline, effort
 - Risk/reward assessment
-- Implementation roadmap (fáze 1-3)
+- Implementation roadmap (phases 1-3)
 
 ### 11. Appendices
 
 - Data sources & methodology
 - Detailed competitive profiles
 - Glossary
-- Full source list s confidence scores
+- Full source list with confidence scores
 
 ---
 
-## Vizuální prvky (doporučené)
+## Recommended Visuals
 
-Recommended visuals:
-
-| Sekce | Vizuál |
-|-------|--------|
+| Section | Visual |
+|---------|--------|
 | Executive Summary | Executive infographic |
-| Market Size | TAM/SAM/SOM diagram (`--infographic stats`) |
-| Porter's | Five Forces diagram (`--infographic hierarchy`) |
-| Competitive | Positioning matrix (`--infographic comparison`) |
-| SWOT | SWOT quadrant (`--infographic comparison`) |
-| Roadmap | Implementation timeline (`--infographic timeline`) |
+| Market Size | TAM/SAM/SOM funnel diagram |
+| Porter's | Five Forces diagram |
+| Competitive | Positioning matrix |
+| SWOT | SWOT quadrant |
+| Roadmap | Implementation timeline |
 
 ---
 
-## Mapping na 4-Stream Pattern
+## Mapping to 4-Stream Pattern
 
-Při použití s `/deep-research`:
+When used with `/deep-research`:
 
-| Stream | Kapitoly |
+| Stream | Chapters |
 |--------|----------|
 | MARKET | 2 (Market Size), 5 (Customer Analysis) |
 | TECHNOLOGY | 7 (Technology Trends) |
@@ -139,4 +137,4 @@ Při použití s `/deep-research`:
 
 ---
 
-*Template v1.0.0 | Inspirováno K-Dense market-research-reports skill*
+*Template v1.1.0*

@@ -56,10 +56,10 @@ Conduct research on: $ARGUMENTS
 
 | Format | Flag | Structure |
 |--------|------|-----------|
-| Standard | *(default)* | Executive Summary → Findings → Sources |
-| Market Report | `--format market-report` | 11 chapters (Exec Summary, TAM/SAM/SOM, Porter's, PESTLE, Customer, Competitive, Tech, Regulatory, SWOT, Recommendations, Appendices) |
+| Standard | *(default)* | Executive Summary → Findings → Sources. Template: `skills/research/templates/research-output.md` |
+| Market Report | `--format market-report` | 11 chapters (Exec Summary, TAM/SAM/SOM, Porter's, PESTLE, Customer, Competitive, Tech, Regulatory, SWOT, Recommendations, Appendices). Template: `skills/research/templates/market-report.md` |
 
-When `--format market-report` is used, apply template: `skills/research/templates/market-report.md`
+Default template is always applied. Use `--format market-report` for comprehensive market analysis.
 
 ---
 

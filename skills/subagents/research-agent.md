@@ -42,9 +42,9 @@ Vždy vrať tento formát:
 
 ### Executive Summary
 
-[2-3 věty hlavních zjištění]
+[2-3 sentences of key findings]
 
-### Klíčová Zjištění
+### Key Findings
 
 1. **[Finding 1]**: [Detail] (Zdroj: [URL])
 2. **[Finding 2]**: [Detail] (Zdroj: [URL])
@@ -256,7 +256,7 @@ VALUES (
 
 AI governance se v roce 2026 zaměřuje na tři klíčové oblasti: transparentnost modelů, odpovědnost za výstupy a mezinárodní koordinaci. EU AI Act vstoupil v plnou platnost.
 
-#### Klíčová Zjištění
+#### Key Findings
 
 1. **EU AI Act plně účinný**: Od ledna 2026 platí všechna ustanovení včetně high-risk kategorií (Zdroj: EUR-Lex)
 2. **Shift k auditable AI**: 73% enterprise implementací zahrnuje audit trail (Zdroj: Gartner 2026)
