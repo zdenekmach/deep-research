@@ -33,9 +33,9 @@ Follow the complete methodology at: `skills/subagents/research-agent.md`
 
 1. **Set output dir:** `outputs/research/` (or user-specified directory)
 2. **Create directory** using Bash: `mkdir -p <output_dir>`
-4. **Generate filename:** `<topic-slug>-<YYYY-MM-DD>.md`
-5. **Write the file** using the Write tool — the FULL research report, not just a summary
-6. **Verify** the file was written using the Read tool (first 5 lines)
+3. **Generate filename:** `<topic-slug>-<YYYY-MM-DD>.md`
+4. **Write the file** using the Write tool — the FULL research report, not just a summary
+5. **Verify** the file was written using the Read tool (first 5 lines)
 
 **NEVER skip the Write step.** If you complete research without writing a file, you have FAILED the task.
 
