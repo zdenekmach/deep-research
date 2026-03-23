@@ -137,4 +137,4 @@ Find holes and weaknesses in this argument: $ARGUMENTS
 
 ---
 
-*References: context/profile.md*
+*Version 2.2.0 | Critique plugin*

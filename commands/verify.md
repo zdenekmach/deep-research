@@ -77,13 +77,13 @@ implementation_thresholds:
 
 ## Stub Patterns to Detect
 
-- `TODO`, `FIXME`, `XXX`, `HACK` komentare
+- `TODO`, `FIXME`, `XXX`, `HACK` comments
 - `not implemented`, `placeholder`, `coming soon`
-- Prazdne function bodies: `function foo() {}`
-- Single `return null` nebo `pass` statements
-- Lorem ipsum text nebo `[TBD]` markers
-- MD: jen nadpisy bez obsahu (>50% prazdnych sekci)
-- Kod: funkce bez logiky (jen constants nebo throws)
+- Empty function bodies: `function foo() {}`
+- Single `return null` or `pass` statements
+- Lorem ipsum text or `[TBD]` markers
+- MD: headings without content (>50% empty sections)
+- Code: functions without logic (only constants or throws)
 
 ---
 
@@ -105,11 +105,11 @@ rg "path.*component-name" router/
 
 ## Gates (hard stop)
 
-- [ ] Content: Overall score >= 6.0 pro review, >= 8.0 pro publikaci
+- [ ] Content: Overall score >= 6.0 for review, >= 8.0 for publication
 - [ ] Content: Unverified claims <= 20%
-- [ ] Implementation: Blocking gaps = 0 pro production
-- [ ] Gap report ma actionable fixes
-- [ ] Re-verification ukazuje improvement delta
+- [ ] Implementation: Blocking gaps = 0 for production
+- [ ] Gap report has actionable fixes
+- [ ] Re-verification shows improvement delta
 
 ---
 

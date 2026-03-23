@@ -130,6 +130,8 @@ Original: document.md (unchanged)
 
 ---
 
-## Reference
+## References
 
-- Original methodology: https://github.com/blader/humanizer
+- English patterns: Built-in (24 patterns from blader/humanizer methodology)
+- Czech patterns: `skills/humanize/references/czech-patterns.md`
+- Original: https://github.com/blader/humanizer

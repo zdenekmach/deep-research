@@ -182,7 +182,7 @@ When `--format market-report`:
 ## Output
 
 **Format:** markdown (modular: summary + detail files)
-**Location:** `outputs/research/YYYY-MM-DD-{topic}-summary.md` (project) or `outputs/research/` (fallback)
+**Location:** `outputs/research/YYYY-MM-DD-{topic}-summary.md`
 **Type:** deep-research
 
 **Frontmatter:**
@@ -192,7 +192,6 @@ type: research
 subtype: deep-research
 title: "Deep Research: [Topic]"
 date: YYYY-MM-DD
-project: "[project-slug]"
 status: completed
 confidence: 0.XX
 sources_count: XX

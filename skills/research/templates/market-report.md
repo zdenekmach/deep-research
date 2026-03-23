@@ -12,7 +12,6 @@ type: research
 subtype: market-report
 title: "Market Report: [Topic]"
 date: YYYY-MM-DD
-project: "[slug]"
 status: draft
 confidence: 0.XX
 sources_count: XX
