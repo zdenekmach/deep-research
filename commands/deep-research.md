@@ -175,7 +175,7 @@ SearXNG agreguje 218 engines (Google Scholar, arXiv, Semantic Scholar, HN, Reddi
 When `--format market-report`:
 - 4-Stream pattern maps to chapters: MARKET→kap2+5, TECHNOLOGY→kap7, COMPETITION→kap3+6, RISKS→kap4+8+9
 - Output is single consolidated file (not modular)
-- Recommended visuals listed per section (for `/image --infographic` generation)
+
 
 ---
 

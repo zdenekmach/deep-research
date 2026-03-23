@@ -42,9 +42,9 @@ Find holes and weaknesses in this argument: $ARGUMENTS
 
 ---
 
-## Pravidla
+## Rules
 
-| Situace | Akce |
+| Situation | Action |
 |---------|------|
 | "I disagree" without specifics | Must specify: "Premise P2 contains hasty generalization -- 3 examples insufficient" |
 | Weak counter-argument (straw man) | Must steel-man: present strongest possible version of opposition |
@@ -126,15 +126,14 @@ Find holes and weaknesses in this argument: $ARGUMENTS
 [Summary judgment]
 ```
 
-**Lokace:** `60-References/critiques/` or project outputs
+**Location:** Project outputs directory
 **Type:** critique
 
 ---
 
-## Co dal
+## Related
 
-- `/blog` for writing own response or counter-argument
-- Fact-check agent in research workflows for verification
+- Use fact-check agent for source verification after critique
 
 ---
 

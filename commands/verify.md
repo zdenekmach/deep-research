@@ -21,7 +21,7 @@ Verify content quality: $ARGUMENTS
 
 ### Content Quality (original)
 1. **Fact checking** -- Extract claims, find evidence, cross-reference, assign confidence
-2. **Style checking** -- Load writing-style.md, analyze compliance, report issues
+2. **Style checking** -- Analyze style compliance, report issues
 3. **Source validation** -- Extract URLs/citations, check accessibility, credibility, recency
 4. **Comprehensive** -- All checks + unified quality score
 
@@ -116,9 +116,9 @@ rg "path.*component-name" router/
 ## Output
 
 **Format:** markdown (verification report)
-**Lokace:** inline response
+**Location:** inline response
 **Type:** verification
 
 ---
 
-*References: context/preferences/writing-style.md | Templates: N/A*
+*Version 1.3.0 | Verify plugin*

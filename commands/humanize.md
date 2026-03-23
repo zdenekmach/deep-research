@@ -1,130 +1,135 @@
 # Humanize
 
-**Verze:** 1.1.0 | **Účel:** Odstranit typické AI vzory z textu, zachovat obsah
+**Version:** 1.1.0 | **Purpose:** Remove typical AI patterns from text while preserving content and expertise
 
-Humanizuj text — odstraň AI-ismy, zachovej obsah a odbornost: $ARGUMENTS
+Humanize text — remove AI-isms, preserve content and expertise: $ARGUMENTS
 
 ---
 
-## Kdy aktivovat
+## When to Use
 
-- Uživatel volá `/humanize`
-- Před odesláním nabídky, deliverables, blog postu
-- Na jakémkoli textu kde je potřeba odstranit "AI tón"
+- Before sending proposals, deliverables, blog posts
+- On any text that needs the "AI tone" removed
+- After generating content with other commands
 
 ---
 
 ## $ARGUMENTS
 
-| Argument | Popis |
-|----------|-------|
-| `<file>` | Cesta k souboru ke zpracování |
-| `<text>` | Inline text (v uvozovkách) |
+| Argument | Description |
+|----------|-------------|
+| `<file>` | Path to file to process |
+| `<text>` | Inline text (in quotes) |
 | `--tone <mode>` | casual / professional / formal-consulting / academic (default: professional) |
-| `--audit-only` | Jen identifikovat vzory, nepřepisovat |
+| `--audit-only` | Only identify patterns, don't rewrite |
 
 ---
 
 ## Workflow
 
-### 1. Detekce jazyka
+### 1. Language Detection
 
-Automaticky rozpoznej jazyk vstupu:
-- **Čeština** → použij české AI vzory
-- **Angličtina** → použij anglické AI vzory
-- **Mix** → zpracuj každou sekci podle jejího jazyka
+Automatically detect input language and apply appropriate AI pattern list.
 
-### 2. Detekce tone mode
+### 2. Tone Mode Detection
 
-Pokud `--tone` není zadán, odvoď z kontextu:
-- Nabídka / proposal / deliverable → `formal-consulting`
-- Blog / sociální sítě → `casual`
-- Email / report / prezentace → `professional`
-- Research / analýza → `academic`
+If `--tone` is not specified, infer from context:
+- Proposal / deliverable → `formal-consulting`
+- Blog / social media → `casual`
+- Email / report / presentation → `professional`
+- Research / analysis → `academic`
 
-### 3. Průchod 1: Identifikace a přepis
+### 3. Pass 1: Identify and Rewrite
 
-Načti referenční skill podle jazyka:
-- **CZ:** `references/humanizer-patterns-cz.md` (české vzory)
-- **EN:** Originální 24 vzorů z blader/humanizer
+Scan text for common AI patterns:
 
-Projdi text a identifikuj vzory. Pro každý nalezený:
-- Zaznamenej kategorii a konkrétní výskyt
-- Přepiš — zachovej faktický obsah, změň jen formu
+**Vocabulary patterns:**
+- "implement/implementation" → deploy, set up, introduce
+- "leverage" → use, build on
+- "comprehensive/robust/sophisticated" → use specific adjective
+- "seamless/seamlessly" → smooth, easy
+- "paradigm shift/game-changer" → specific improvement
+
+**Structure patterns:**
+- "It's important to note" / "It should be mentioned" → delete
+- "In the context of" → rephrase directly
+- "Additionally" / "Furthermore" / "Moreover" at sentence start → vary or remove
+- Excessive em-dash (—) usage
+- Lists where a sentence would suffice
+- Concluding paragraphs that repeat what was said
+
+**Style patterns:**
+- Passive voice → active voice
+- Abstract → concrete (numbers and examples instead of generics)
+- Long → short (if the same can be said in fewer words)
+
+For each found pattern: record category and occurrence, rewrite preserving factual content.
 
 ### 4. Self-Audit
 
-Po prvním přepisu se zeptej:
+After first rewrite, ask: "What still sounds generic or AI-generated?" Record findings.
 
-> "Co na tomto textu stále působí genericky / AI-generovaně?"
+### 5. Pass 2: Final Rewrite
 
-Zapiš zjištění.
-
-### 5. Průchod 2: Finální přepis
-
-Na základě auditu oprav zbývající AI-ismy.
+Fix remaining AI-isms based on audit.
 
 ### 6. Personality Check
 
-Podle tone mode ověř:
-- `casual` → má osobní hlas? variabilitu?
-- `professional` → přirozený ale ne příliš osobní?
-- `formal-consulting` → důvěryhodný, konkrétní, bez generik?
-- `academic` → precizní, kvalifikovaný?
+Verify by tone mode:
+- `casual` → personal voice? variation?
+- `professional` → natural but not too personal?
+- `formal-consulting` → credible, specific, no generics?
+- `academic` → precise, qualified?
 
 ---
 
 ## Output
 
-### Soubor → nový soubor (default)
+### File → new file (default)
 
-Pokud vstup je soubor (`/humanize dokument.md`):
-1. Vytvoř nový soubor: `dokument.humanized.md` (ve stejném adresáři)
-2. Originál zůstane beze změny
-3. Vypiš audit do konzole
+If input is a file (`/humanize document.md`):
+1. Create new file: `document.humanized.md` (same directory)
+2. Original remains unchanged
+3. Print audit to console
 
-Pojmenování: `{název}.humanized.{přípona}`
-- `nabidka.md` → `nabidka.humanized.md`
-- `report.docx` → zpracuj text, výstup `report.humanized.md`
+Naming: `{name}.humanized.{ext}`
 
-### Inline text → konzole
+### Inline text → console
 
-Pokud vstup je text v uvozovkách, výstup jde přímo do konzole.
+If input is quoted text, output goes directly to console.
 
 ### --audit-only
 
-Jen tabulka nalezených vzorů bez přepisu a bez nového souboru.
+Just a table of found patterns without rewriting.
 
-### Formát auditu (vždy do konzole)
+### Audit format (always to console)
 
 ```
-✓ Humanizováno: dokument.humanized.md
+Humanized: document.humanized.md
 
-| # | Kategorie | Originál | Změna |
-|---|-----------|----------|-------|
-| 1 | AI slovník | "implementovat" | → "zavést" |
-| 2 | Filler | "Je třeba poznamenat" | → smazáno |
+| # | Category | Original | Change |
+|---|----------|----------|--------|
+| 1 | AI vocabulary | "implement" | → "set up" |
+| 2 | Filler | "It should be noted" | → deleted |
 
-Nalezeno vzorů: X | Jazyk: CZ | Tone: professional
-Originál: dokument.md (beze změny)
+Patterns found: X | Language: EN | Tone: professional
+Original: document.md (unchanged)
 ```
 
 ---
 
-## Pravidla
+## Rules
 
-1. **Nikdy neměň fakta** — jen formu a styl
-2. **Neodstraňuj odbornost** — consulting text má být odborný
-3. **Kontext rozhoduje** — technický termín v IT kontextu je OK
-4. **Kratší > delší** — pokud lze říct stejně kratší větou
-5. **Aktivní > pasivní** — "navrhuji" místo "je navrhováno"
-6. **Konkrétní > abstraktní** — čísla a příklady místo generik
-7. **Zachovej strukturu** — nadpisy, seznamy, tabulky nechat pokud dávají smysl
+1. **Never change facts** — only form and style
+2. **Don't remove expertise** — consulting text should remain expert
+3. **Context decides** — technical term in IT context is OK
+4. **Shorter > longer** — if the same can be said in fewer words
+5. **Active > passive** — "I recommend" instead of "it is recommended"
+6. **Specific > abstract** — numbers and examples instead of generics
+7. **Preserve structure** — headings, lists, tables stay if they add value
 
 ---
 
 ## Reference
 
-- Český skill: `references/humanizer-patterns-cz.md`
-- Analýza originálu: `references/humanizer-analysis.md`
-- Originál: https://github.com/blader/humanizer
+- Original methodology: https://github.com/blader/humanizer

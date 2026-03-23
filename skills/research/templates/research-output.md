@@ -27,7 +27,7 @@ created_by: /research
 
 ## Executive Summary
 
-[2-3 odstavce plynulé české prózy shrnující klíčová zjištění. Viz README.md → "Language Configuration".]
+[2-3 paragraphs of fluent prose summarizing key findings. See README.md → "Language Configuration".] 
 
 ---
 

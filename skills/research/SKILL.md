@@ -77,7 +77,7 @@ If found, offer: NAVÁZAT / AKTUALIZOVAT / NOVÝ
 - Note contradictions
 - URLs for everything
 
-**Trusted domains:** See `.claude/hooks/validate-research.sh`
+**Trusted domains:** github.com, arxiv.org, nature.com, sciencedirect.com, wikipedia.org, institutional (.gov, .edu)
 
 ### 5. Confidence Scoring
 
@@ -217,7 +217,7 @@ When `--format market-report` is specified, use template: `templates/market-repo
 - Competitive feature comparison matrix (Strong/Adequate/Weak/Absent)
 - Strategic recommendations with prioritization (HIGH/MEDIUM/LOW)
 - Single consolidated file (not modular)
-- Recommended `/image --infographic` visuals per section
+
 
 ---
 
@@ -246,8 +246,8 @@ When `--format market-report` is specified, use template: `templates/market-repo
 ## Viz také
 
 - `/deep-research` — 25+ sources, multi-pass
-- `/lookup` — Quick fact check
-- `/domain-model` — Entity management
+
+
 - `/knowledge save` — Save discovered entities
 
 ## Definition of Done
@@ -256,6 +256,6 @@ When `--format market-report` is specified, use template: `templates/market-repo
 
 Před finalizací ověř checklist pro typ `research`:
 ```
-python3 .claude/scripts/tasks/utils.py dod research
+# Run Definition of Done checklist for research
 ```
 

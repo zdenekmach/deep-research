@@ -9,7 +9,7 @@ Conduct research on: $ARGUMENTS
 ```
 /research Claude Code hooks                            # Quick research (3-7 sources)
 /research "EU taxonomy banking"                        # Moderate research
-/research "AI in Czech banking" --format market-report # Market report (11 kapitol)
+/research "AI in Czech banking" --format market-report # Market report (11 chapters)
 /deep-research topic                                   # Deep research (25+ sources)
 ```
 
@@ -65,10 +65,9 @@ When `--format market-report` is used, apply template: `skills/research/template
 
 ## Related Commands
 
-- `/deep-research` - Multi-pass research (25+ sources)
-- `/domain-model` - Create knowledge base
-- `/lookup` - Quick entity lookup
-- `/blog` - Turn research into post
+- `/deep-research` — Multi-pass research (25+ sources)
+- `/critique` — Logical analysis of findings
+- `/verify` — Fact-check before publication
 
 ---
 

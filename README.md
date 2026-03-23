@@ -81,7 +81,7 @@ Or for other languages:
 
 ```markdown
 ## Output Language
-- Final output: Czech with full diacritics (háčky a čárky)
+- Final output: Czech with full diacritics
 - Technical terms: First mention = Czech + English in parentheses
 ```
 

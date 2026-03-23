@@ -113,7 +113,7 @@ created_by: /research --format market-report
 
 ## Vizuální prvky (doporučené)
 
-Ke generaci přes `/image --infographic`:
+Recommended visuals:
 
 | Sekce | Vizuál |
 |-------|--------|

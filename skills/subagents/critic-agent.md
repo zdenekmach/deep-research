@@ -261,7 +261,7 @@ Je zřejmé, že organizace, které nepřijmou AI, zůstanou pozadu.
 ### Issue 2 (P1): Filler opening
 - **Location:** "V dnešní rychle se měnící době je důležité si uvědomit..."
 - **Problem:** Anti-pattern #1 v content writing. Říká nic, zabírá prostor.
-- **Fix:** Vést datovým hoookem: "3 z 5 AI projektů v českých bankách nedoručí ROI v prvním roce."
+- **Fix:** Lead with data hook: "3 out of 5 enterprise AI projects fail to deliver ROI in year one."
 
 ### Issue 3 (P2): No actionability
 - **Location:** Celý fragment
