@@ -1,6 +1,6 @@
 # Deep Research
 
-**Version:** 1.5.0 | **Purpose:** Multi-pass parallel research with 25+ sources, SIFT evaluation, adaptive resolution, conflict resolution, and opinionated recommendations
+**Version:** 1.6.0 | **Purpose:** Multi-pass parallel research with 25+ sources, SIFT evaluation, adaptive resolution, conflict resolution, practical layer, and opinionated recommendations
 
 Deep multi-pass research with parallel agents and multi-stream synthesis: $ARGUMENTS
 
@@ -51,7 +51,12 @@ PATTERN: Multi-stream parallel research 25+ sources, SIFT evaluation, conflict r
 4. **Phase 2: Adaptive Deep Dives** -- Allocate effort based on Signal Map. STRONG streams: more tokens, specific queries, nuanced comparison, edge cases. MODERATE streams: standard deep dive. WEAK streams: fewer tokens, broader queries, pattern detection across sparse sources, aggregate directional signals instead of precise claims. Recursive exploration for STRONG/MODERATE only. For WEAK: pool broadly, don't force granularity.
 5. **Phase 3: Source Synthesis & Conflict Resolution** -- SIFT Framework: Stop (evaluate before use), Investigate (author/org?), Find (better source?), Trace (original claim?). Credibility scoring: peer-reviewed +3, institutional +2, expert blog +1, general 0, user-generated -1. Deduplicate, connect subtopics, build timeline. CRITICAL: explicit conflict resolution with reasoning -- never "sources disagree", always pick one with reasoning or state "insufficient data". BLOCKER: 25+ unique sources, all SIFT-evaluated, all conflicts resolved.
 6. **Phase 4: Opinionated Recommendations** -- Transform facts into opinionated actionable insights. Use 2D confidence model: Signal Strength (STRONG/MODERATE/WEAK) × Source Convergence (converging/contradictory). STRONG+converging → PRECISE claim with specific action. STRONG+contradictory → NUANCED position with reasoning. MODERATE+converging → standard DO/AVOID/CONSIDER. WEAK+converging → DIRECTIONAL pattern (not precise claim). WEAK+contradictory → UNKNOWN — acknowledge gap, suggest further research. NEVER apply fine resolution to weak signal — that produces hallucinated precision. For consulting topics: include roadmap implications. BLOCKER: no "could do A or B" -- always opinionated, but match precision to signal strength.
-7. **Phase 5: Final Output** -- **LANGUAGE:** Subagent outputs are in English; final user-facing files follow the configured output language (see README.md → "Language Configuration"). No language mixing. Full sentences, not telegraphic bullet dumps. Tables OK for data comparisons, but text sections must be readable prose. Modular structure: summary file + detail files. STRONG streams get full detail files. WEAK streams get a section in summary flagged as "low signal — directional only" (no separate detail file). Include Signal Map in summary. Save to active project `outputs/research/` (default: `outputs/research/`). Include frontmatter, all sources with credibility scores.
+7. **Phase 5: Final Output** -- **LANGUAGE:** Subagent outputs are in English; final user-facing files follow the configured output language (see README.md → "Language Configuration"). No language mixing. Full sentences, not telegraphic bullet dumps. Tables OK for data comparisons, but text sections must be readable prose. Modular structure: summary file + detail files. STRONG streams get full detail files. WEAK streams get a section in summary flagged as "low signal — directional only" (no separate detail file). Include Signal Map in summary. Save to active project `outputs/research/` (default: `outputs/research/`). Include frontmatter, all sources with credibility scores. **NEW (v1.6.0) — Four mandatory enhancements:**
+   - **NARRATIVE SUMMARY:** The summary file MUST read as a cohesive narrative, not a structured data dump. Flow: macro context → key findings per stream (woven together, not siloed) → implications and synthesis → what's missing. The reader should understand the story without opening detail files. Think "analyst report for a board member", not "database export".
+   - **PRACTICAL LAYER:** Every stream output (summary section AND detail file) MUST include a "Practical Layer" subsection answering: What does this cost? Who offers it? How accessible is it today? What can someone actually DO with this information? Include concrete numbers (prices, timelines, providers) where available. If no practical data found, explicitly flag it as a gap.
+   - **ADJACENT TOPICS:** Every stream MUST identify 2-3 related/adjacent topics that the research touches but doesn't cover in depth. Format: "Adjacent: [Topic] — [why relevant, what we didn't cover]". These go at the end of each stream section. Purpose: help the reader see what's beyond the edges of this research.
+   - **BIBLIOGRAPHY FORMAT:** Use numbered inline references [1][2][3] throughout the text. At the end of each file, include a numbered bibliography: `[N] Author/Org — "Title" — URL (Date) — Credibility: +X`. Group by credibility tier (High +2/+3, Medium +1/0, Low -1/-2). This replaces the previous unstructured source lists.
+   - **OUTPUT TEMPLATE:** Follow the structure defined in `skills/research/templates/deep-research-output.md` for both summary and detail files.
 
 ---
 
@@ -122,6 +127,10 @@ PATTERN: Multi-stream parallel research 25+ sources, SIFT evaluation, conflict r
 | Output without proper diacritics | Full diacritics in configured output language |
 | Mixed-language sentences | Subagents write English, final output in configured language |
 | Telegraphic bullet dumps | Full sentences and paragraphs (tables OK for structured data) |
+| Summary = siloed stream sections | Summary = narrative weaving streams into coherent story |
+| No pricing/availability/accessibility info | Practical Layer with costs, providers, timelines per stream |
+| Research stops at topic boundary | Adjacent Topics (2-3 per stream) showing what's beyond edges |
+| Flat source list at end | Numbered inline refs [1][2] + bibliography grouped by credibility tier |
 
 ---
 
@@ -155,6 +164,10 @@ PATTERN: Multi-stream parallel research 25+ sources, SIFT evaluation, conflict r
 - [ ] No hallucinated sources
 - [ ] No "could do A or B" -- always opinionated with reasoning
 - [ ] Final output in configured language with full diacritics (no language mixing, no bullet dumps)
+- [ ] Summary reads as cohesive narrative (not siloed stream sections)
+- [ ] Practical Layer present in every stream (costs, providers, accessibility)
+- [ ] Adjacent Topics (2-3) identified per stream
+- [ ] Bibliography uses numbered inline refs [1][2] grouped by credibility tier
 - [ ] Output saved to configured directory
 - [ ] Subagent prompts explicitly request English output
 
@@ -202,4 +215,4 @@ created_by: /deep-research
 
 ---
 
-*References: skills/research/domains/ | Subagents: skills/subagents/research-agent.md, skills/subagents/deep-research-agent.md*
+*References: skills/research/domains/ | Subagents: skills/subagents/research-agent.md, skills/subagents/deep-research-agent.md | Output template: skills/research/templates/deep-research-output.md*

@@ -115,13 +115,70 @@ Depth 3: Edge cases, minority perspectives (only if warranted)
 - NEVER write "you could do A or B" — always pick one with reasoning
 - Match precision to signal strength
 
+## Phase 6.5: Practical Layer & Adjacent Topics (v1.6.0)
+
+### Practical Layer Collection
+
+For each stream, actively search for practical information:
+
+```
+Practical layer queries:
+- "[topic] cost pricing 2025 2026"
+- "[topic] providers clinics companies available"
+- "[topic] how to access get started"
+- "[topic] commercial availability consumer"
+```
+
+Record per stream:
+- **Costs:** prices, cost ranges, insurance coverage
+- **Availability:** who offers it, where, how to access
+- **Timeline:** when realistically available for end-user
+- **Action steps:** what can the reader do TODAY
+
+If practical data doesn't exist → explicitly flag: "Practical data gap: no pricing/availability information found."
+
+### Adjacent Topic Detection
+
+During research, note topics that repeatedly surface but fall outside scope:
+
+```
+Example for "Senolytics" stream:
+- Adjacent: GLP-1 agonists — anti-inflammatory effects overlap with senolytic mechanisms, but different drug class
+- Adjacent: Senescence biomarkers — needed for patient selection but no validated clinical biomarker exists
+- Adjacent: CAR-T senolytic cells — next-gen approach, only preclinical
+```
+
+Every stream MUST identify at least 2 adjacent topics. This helps the reader see what's beyond the research boundaries and where they could continue.
+
 ## Phase 7: Final Output
 
 ### Modular Structure
 
-- **Summary file**: Signal Map, executive summary, key findings, recommendations
-- **Detail files**: One per STRONG stream (full analysis with sources)
+- **Summary file (NARRATIVE)**: Must read as a cohesive narrative, not a structured data dump. Flow: macro context → key findings woven across streams (not siloed) → implications and synthesis → what's missing. Think "analyst report for a board member", not "database export". Includes Signal Map, practical layer summary, and numbered bibliography.
+- **Detail files**: One per STRONG stream (full analysis with sources). Each MUST include:
+  - Deep analysis in prose
+  - **Practical Layer** (costs, providers, accessibility, action steps)
+  - **Adjacent Topics** (2-3 related topics at section end)
+  - Numbered bibliography specific to this stream
 - **WEAK streams**: Section in summary flagged as "low signal — directional only" (no separate file)
+
+### Bibliography Format (v1.6.0)
+
+Use numbered inline references [1][2][3] throughout text. At end of each file:
+
+```markdown
+## Sources
+
+### High Credibility (+2/+3)
+[1] Fuentealba et al. — "Impact of TPE on Biological Age" — https://... (May 2025) — Credibility: +3
+[2] Nature Communications — "14 Epigenetic Clocks Compared" — https://... (2025) — Credibility: +3
+
+### Medium Credibility (+1/0)
+[5] Longevity.Technology — "NewLimit $130M" — https://... (2025) — Credibility: +1
+
+### Low Credibility (-1/-2)
+[9] Market Research Firm — "Senolytic Market Size" — https://... (2025) — Credibility: 0
+```
 
 ### Quality Checklist
 
@@ -131,8 +188,12 @@ Depth 3: Edge cases, minority perspectives (only if warranted)
 - [ ] Signal Map included in summary
 - [ ] Recommendations match signal strength
 - [ ] No precise claims on weak signals
+- [ ] **Summary reads as cohesive narrative** (not siloed stream sections)
+- [ ] **Practical Layer** present in every stream (costs, providers, accessibility)
+- [ ] **Adjacent Topics** (2-3) identified per stream
+- [ ] **Numbered inline refs** [1][2] + bibliography grouped by credibility tier
 - [ ] Output saved to file with frontmatter
 
 ---
 
-*Version: 1.0.0 — Deep research methodology*
+*Version: 1.6.0 — Deep research methodology. v1.6.0: Added Narrative Summary, Practical Layer, Adjacent Topics, Numbered Bibliography.*

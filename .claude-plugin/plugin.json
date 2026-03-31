@@ -1,7 +1,7 @@
 {
   "name": "deep-research",
-  "version": "1.0.0",
-  "description": "Multi-pass parallel research with 25+ sources, SIFT evaluation, conflict resolution, fact-checking, content critique, and humanization. Includes specialized agents for deep research, fact-checking, and 4D content critique.",
+  "version": "1.6.0",
+  "description": "Multi-pass parallel research with 25+ sources, SIFT evaluation, conflict resolution, practical layer, adjacent topics, narrative synthesis, fact-checking, content critique, and humanization. Includes specialized agents for deep research, fact-checking, and 4D content critique.",
   "author": {
     "name": "Zdenek Machacek"
   },
