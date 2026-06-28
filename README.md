@@ -1,8 +1,8 @@
 # deep-research
 
-**Version:** 1.6.0
+**Version:** 1.7.0
 
-Multi-pass parallel research plugin for [Claude Code](https://code.claude.com). Systematically explores topics from multiple angles using parallel agents, gathers 25+ quality sources, and synthesizes findings into actionable insights with practical context.
+Multi-pass parallel research plugin for [Claude Code](https://code.claude.com). Systematically explores topics from multiple angles using parallel agents, gathers 25+ quality sources, and synthesizes findings into actionable insights with practical context. Also turns research into **decisions** (`/options`) and **interactive offline sites** (`/learning-site`) via a built-in data-driven site engine.
 
 ## What's Included
 
@@ -12,6 +12,15 @@ Multi-pass parallel research plugin for [Claude Code](https://code.claude.com). 
 |---------|---------|---------|------|
 | `deep-research` | Multi-pass parallel research with SIFT evaluation | 25-90 | 10-18 min |
 | `research` | Quick to moderate evidence-driven research | 3-7 | 2-5 min |
+
+### Decision & Site Commands
+
+| Command | Purpose |
+|---------|---------|
+| `options` | Decision flow over 2–4 alternatives — scope → parallel research of variants (shared criteria) → **comparison web** (table + maps) → **human picks** → actionable **detail web** of the chosen one. The tool never decides for you. `--profile trip` adds travel rigor (GPS, hourly schedule, weather + rain backup, golden hours, eBird). |
+| `learning-site` | Interactive **offline** study website from a complex topic — research → structured content → standalone HTML SPA (left nav, search, mermaid, clickable citations, active recall). |
+
+Both build on a **data-driven site engine** (`skills/concept-learning-site/assets/`): Leaflet maps (points + route + legend) and galleries render from a `site.json` — no per-case hand-written JS. Vendored libraries, so the generated text/structure works offline (map tiles and remote photos need a connection).
 
 ### Quality & Review Commands
 
@@ -216,6 +225,7 @@ Research outputs are saved to `outputs/research/` by default. Each output includ
 
 ## Changelog
 
+- **1.7.0** (2026-06-28): `/options` decision flow (scope → research variants → comparison web → human picks → detail web) + `/learning-site` study sites, both on a new data-driven site engine (Leaflet maps + galleries from `site.json`). `trip` profile ports the old trip-planning rigor (GPS, weather, golden hours, eBird) as a standalone module. Replaces a separate trips plugin; parity verified on a real multi-day trip.
 - **1.6.0** (2026-03-31): Narrative Summary, Practical Layer, Adjacent Topics, Numbered Bibliography. Inspired by comparative analysis with Gemini Deep Research.
 - **1.5.0** (2026-02-09): Adaptive Resolution — Signal Map, 2D confidence model, adaptive token allocation.
 - **1.1.0** (2026-01-23): Recursive Depth Pattern — dynamic sub-agent spawning for complex topics.
