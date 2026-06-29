@@ -6,7 +6,7 @@ description: "Triggers: /learning-site, 'studijní web', 'learning site', 'web n
 # Concept Learning Site Skill
 
 **Verze:** 1.0.0 | **Pattern:** SKILL-TEMPLATE + generátor (markdown → standalone HTML)
-**Pattern:** hybrid — exposition mode (vysvětluj téma, ne „dokument říká") + analytické čočky (80/20 jádro, mental models, deconstruction, mastery roadmap, playbook, failure map) + prezentační vrstva (standalone HTML).
+**Pattern:** hybrid — exposition mode (→ `skills/document-explainer`) + analytické čočky (→ `skills/content-extract`) + prezentační vrstva (standalone HTML).
 
 Ze složitého tématu vyrobí **interaktivní offline studijní web**. Vstupem je jen název tématu, výstupem standalone `index.html`, který se otevře bez serveru a funguje bez internetu.
 

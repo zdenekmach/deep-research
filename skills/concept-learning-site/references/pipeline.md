@@ -33,8 +33,8 @@ Konkrétní zadání pro fáze 1 a 2. Nahraď `<TÉMA>`, `<SLUG>` a `<OUT>`. Pro
 >
 > **Přečti PŘED psaním:**
 > 1. Report: `<OUT>/<SLUG>/research/deep-research-<SLUG>.md` (zdroj pravdy, nevymýšlej fakta)
-> 2. **Exposition mode** — vysvětluj téma vlastními slovy, ne „report říká"; ELI5 hook → hloubka → příklad.
-> 3. **Analytické čočky** — 80/20 jádro (kterých ~6–8 konceptů dá 80 % pochopení), mental models, deconstruction vztahů, mastery roadmap, playbook, failure map.
+> 2. Exposition mode: `skills/document-explainer/SKILL.md`
+> 3. Čočky: `skills/content-extract/references/lenses.md` + `lens-selection.md`
 > 4. Styl: čtivá próza, jedna myšlenka na větu, čísla a notace do tabulek (ne do vět)
 >
 > **Režim:** exposition mode (vysvětluj téma, ne „report říká"). Čtivá próza, čeština, jedna myšlenka na větu. Odborné termíny anglicky s českým glossem. Confidence (verified/estimated/inferred) kde to dává smysl.

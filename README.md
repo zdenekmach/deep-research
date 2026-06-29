@@ -1,6 +1,6 @@
 # deep-research
 
-**Version:** 1.7.0
+**Version:** 1.8.0
 
 Multi-pass parallel research plugin for [Claude Code](https://code.claude.com). Systematically explores topics from multiple angles using parallel agents, gathers 25+ quality sources, and synthesizes findings into actionable insights with practical context. Also turns research into **decisions** (`/options`) and **interactive offline sites** (`/learning-site`) via a built-in data-driven site engine.
 
@@ -21,6 +21,15 @@ Multi-pass parallel research plugin for [Claude Code](https://code.claude.com). 
 | `learning-site` | Interactive **offline** study website from a complex topic — research → structured content → standalone HTML SPA (left nav, search, mermaid, clickable citations, active recall). |
 
 Both build on a **data-driven site engine** (`skills/concept-learning-site/assets/`): Leaflet maps (points + route + legend) and galleries render from a `site.json` — no per-case hand-written JS. Vendored libraries, so the generated text/structure works offline (map tiles and remote photos need a connection).
+
+### Comprehension Commands
+
+| Command | Purpose |
+|---------|---------|
+| `explain-document` | Exposition-mode explanation of **one** complex document (~800–1500 words) — explains the topic, not "the document says". Verified against plain-LLM and NotebookLM baselines. |
+| `extract` | Deep multi-lens extraction from a video/transcript/text — a dispatcher picks 1–3 of 8 analytical lenses (deconstruction, 80/20 insight, playbook, mental models, failure map, mastery roadmap, …) by content type × intent. |
+
+These feed `learning-site` (exposition mode + lenses) and are useful standalone.
 
 ### Quality & Review Commands
 
@@ -225,6 +234,7 @@ Research outputs are saved to `outputs/research/` by default. Each output includ
 
 ## Changelog
 
+- **1.8.0** (2026-06-29): `/explain-document` (exposition-mode explanation of one document) and `/extract` (multi-lens content extraction) added as first-class commands. `learning-site` now references them properly for exposition mode + analytical lenses (instead of inline guidance). Manifest URL aligned with the actual repo.
 - **1.7.0** (2026-06-28): `/options` decision flow (scope → research variants → comparison web → human picks → detail web) + `/learning-site` study sites, both on a new data-driven site engine (Leaflet maps + galleries from `site.json`). `trip` profile ports the old trip-planning rigor (GPS, weather, golden hours, eBird) as a standalone module. Replaces a separate trips plugin; parity verified on a real multi-day trip.
 - **1.6.0** (2026-03-31): Narrative Summary, Practical Layer, Adjacent Topics, Numbered Bibliography. Inspired by comparative analysis with Gemini Deep Research.
 - **1.5.0** (2026-02-09): Adaptive Resolution — Signal Map, 2D confidence model, adaptive token allocation.

@@ -5,7 +5,7 @@ description: "Triggers: /options, 'kam vůbec jet', 'kterou variantu', 'pomoz mi
 
 # Options Flow Skill
 
-**Verze:** 1.0.0 | **Pattern:** orchestrace (Vrstva B) nad datově řízeným site engine (Vrstva A = [[concept-learning-site]])
+**Verze:** 1.0.0 | **Pattern:** orchestrace (Vrstva B) nad datově řízeným site engine (Vrstva A = `concept-learning-site`)
 **Vzor:** scope → paralelní research variant → srovnávací web → rozhodnutí člověka → detailní web. Reálný vzor z Vánoc 2026/27: scope → paralelní research variant → srovnávací web → rozhodnutí člověka → detailní web vybrané varianty.
 
 Generický **rozhodovací tok**. Vezme rozhodnutí s několika smysluplnými variantami, férově je prozkoumá a srovná na interaktivním webu, nechá **člověka vybrat** (gate), a teprve pak rozpracuje vybranou variantu do proveditelného detailu. Nástroj nerozhoduje za uživatele.

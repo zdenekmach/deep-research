@@ -1,7 +1,7 @@
 {
   "name": "deep-research",
-  "version": "1.7.0",
-  "description": "Multi-pass parallel research with 25+ sources, SIFT evaluation, conflict resolution, practical layer, adjacent topics, narrative synthesis, fact-checking, content critique, and humanization. Plus /options — a generic decision flow (scope → parallel research of variants → comparison web → human picks → actionable detail web), with a built-in data-driven site engine (Leaflet maps, galleries) and a trip profile (GPS, weather, golden hours, eBird). Specialized agents for deep research, fact-checking, and 4D content critique.",
+  "version": "1.8.0",
+  "description": "Multi-pass parallel research with 25+ sources, SIFT evaluation, conflict resolution, practical layer, adjacent topics, narrative synthesis, fact-checking, content critique, and humanization. Plus /options — a generic decision flow (scope → parallel research of variants → comparison web → human picks → actionable detail web), with a built-in data-driven site engine (Leaflet maps, galleries) and a trip profile (GPS, weather, golden hours, eBird). Plus /explain-document (exposition-mode explanation of one complex document) and /extract (multi-lens extraction from a video/transcript/text). Specialized agents for deep research, fact-checking, and 4D content critique.",
   "author": {
     "name": "Zdenek Machacek"
   },
